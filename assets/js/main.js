@@ -144,12 +144,10 @@ jQuery(document).ready(function ($) {
     arrowNext = document.querySelector(".htimeline .arrows .arrow__next"),
     firstItem = document.querySelector(".htimeline li:first-child"),
     lastItem = document.querySelector(".htimeline li:last-child"),
-    xScrolling = 250,
-    disabledClass = "disabled";
     // console.log(`elh: ${elH.length}`);
-    setEqualHeights(elH);
+    // setEqualHeights(elH);
     animateTl(xScrolling, arrows, timeline);
-    setSwipeFn(timeline, arrowPrev, arrowNext);
+    // setSwipeFn(timeline, arrowPrev, arrowNext);
     setKeyboardFn(arrowPrev, arrowNext);
   }
 
@@ -197,13 +195,13 @@ jQuery(document).ready(function ($) {
   // ANIMATE TIMELINE
   function animateTl(scrolling, el, tl) {
     let counter = 0;
-    for (let i = 0; i < el.length; i++) {if (window.CP.shouldStopExecution(2)) break;
+    for (let i = 0; i < el.length; i++) {//if (window.CP.shouldStopExecution(2)) break;
       el[i].addEventListener("click", function () {
         if (!arrowPrev.disabled) {
-          arrowPrev.disabled = true;
+          arrowPrev.disabled = false;
         }
         if (!arrowNext.disabled) {
-          arrowNext.disabled = true;
+          arrowNext.disabled = false;
         }
         const sign = this.classList.contains("arrow__prev") ? "" : "-";
         if (counter === 0) {
@@ -211,7 +209,7 @@ jQuery(document).ready(function ($) {
         } else {
           const tlStyle = getComputedStyle(tl);
           // add more browser prefixes if needed here
-          const tlTransform = tlStyle.getPropertyValue("-webkit-transform") || tlStyle.getPropertyValue("transform");
+          const tlTransform = tlStyle.getPropertyValue("transform") || tlStyle.getPropertyValue("-webkit-transform");
           const values = parseInt(tlTransform.split(",")[4]) + parseInt(`${sign}${scrolling}`);
           tl.style.transform = `translateX(${values}px)`;
         }
@@ -219,7 +217,7 @@ jQuery(document).ready(function ($) {
         setTimeout(() => {
           isElementInViewport(firstItem) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
           isElementInViewport(lastItem) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
-        }, 1100);
+        }, 1000);
 
         counter++;
       });
@@ -228,7 +226,7 @@ jQuery(document).ready(function ($) {
 
   // ADD SWIPE SUPPORT FOR TOUCH DEVICES
   function setSwipeFn(tl, prev, next) {
-    const hammer = new Hammer(tl);
+    // const hammer = new Hammer(tl);
     hammer.on("swipeleft", () => next.click());
     hammer.on("swiperight", () => prev.click());
   }
