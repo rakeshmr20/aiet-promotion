@@ -9,7 +9,9 @@
 	<link href="assets/img/favicon.png" rel="icon">
   	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="stylejs.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -82,7 +84,7 @@
 					  </svg>
 					</div>  /wrap -->
 				<!-- /old hexagon -->
-					<!----new haxagons -->
+					<!----new haxagons --
 					    <div class="grids">
 					      <ul id="hexGrid">
 					        <li class="hex">
@@ -170,6 +172,103 @@
 					      </ul>
 					    </div>
 					<!---- /new hexagons -->
+					<div class="container">
+						<div class="box">
+							<div class="thumb">
+								<img src="img1.jpg">
+							</div>
+							<div class="details">
+								<div class="content">
+									<i class="fa fa-gift" aria-hidden="true"></i>
+									<h3>lorem1</h3>
+									<button class="modal-button" href="#myModal1">Read More</button>
+								</div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="thumb">
+								<img src="img2.jpg">
+							</div>
+							<div class="details">
+								<div class="content">
+									<i class="fa fa-globe" aria-hidden="true"></i>
+									<h3>lorem2</h3>
+									<button class="modal-button" href="#myModal2">Read More</button>
+								</div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="thumb">
+								<img src="img3.jpg">
+							</div>
+							<div class="details">
+								<div class="content">
+									<i class="fa fa-glass" aria-hidden="true"></i>
+									<h3>lorem1</h3>
+									<button class="modal-button" href="#myModal3">Read More</button>
+								</div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="thumb">
+								<img src="img4.jpg">
+							</div>
+							<div class="details">
+								<div class="content">
+									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+									<h3>lorem1</h3>
+									<button class="modal-button" href="#myModal4">Read More</button>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+			<div id="myModal1" class="modal">
+			<!-- Modal content -->
+		  		<div class="modal-content">
+		    		<div class="modal-header">
+		      			<span class="close">×</span>
+		      			<h2>Modal Header</h2>
+		    		</div>
+		    		<div class="modal-body">
+		      			<p>Some text in the Modal Body</p>
+		      			<p>Some other text...</p>
+		    		</div>
+		    		<div class="modal-footer">
+		      			<h3>Modal Footer</h3>
+		    		</div>
+		  		</div>
+			</div>
+			<div id="myModal2" class="modal">
+		  		<div class="modal-content">
+		    		<div class="modal-header">
+		      			<span class="close">×</span>
+		      			<h2>Modal Header</h2>
+		    		</div>
+		    		<div class="modal-body">
+		      			<p>Some text in the Modal Body</p>
+		      			<p>Some other text...</p>
+		    		</div>
+		    		<div class="modal-footer">
+		      			<h3>Modal Footer</h3>
+		    		</div>
+		  		</div>
+			</div>
+			<div id="myModal3" class="modal">
+		  		<div class="modal-content">
+		    		<div class="modal-header">
+		      			<span class="close">×</span>
+		      			<h2>Modal Header</h2>
+		    		</div>
+		    		<div class="modal-body">
+		      			<p>Some text in the Modal Body</p>
+		      			<p>Some other text...</p>
+		    		</div>
+		    		<div class="modal-footer">
+		      			<h3>Modal Footer</h3>
+		    		</div>
+		  		</div>
+			</div>
 			</div>
 		</section>
 		<div id="popFaculty" class="overlay">
@@ -491,5 +590,42 @@
 			document.getElementById("popFaculty").style.display = "none";
 		}
 	</script>
+<script type="text/javascript">
+	// Get the button that opens the modal
+var btn = document.querySelectorAll("button.modal-button");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+</script>
 </body>
 </html>
