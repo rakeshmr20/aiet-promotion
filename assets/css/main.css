@@ -897,6 +897,7 @@ Home video
 }
 
 .htimeline ol li .htimeline-content {
+  font-family: 'Rokkitt', serif;
   position: absolute;
   left: calc(100% + 7px);
   width: 280px;
@@ -1003,6 +1004,7 @@ Home video
 
   .htimeline ol li .htimeline-content {
     position: static;
+    font-family: 'Rokkitt', serif;
   }
 
   .htimeline ol li:nth-child(odd) .htimeline-content {
