@@ -33,14 +33,21 @@
 	z-index: 1;
 	box-shadow: 0 5px 20px rgba(0,0,0,1);
 }
+.container .box .thumb
+{
+	position: absolute;
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+}
 .container .box:nth-child(odd) .thumb
 {
 	bottom: 0;
 	left: 0;
 }
-.container .box img
+.container .box .thumb img
 {
-	width:inherit;
+	width:100%;
 	height:inherit;
 }
 .container .box .details
@@ -91,6 +98,11 @@
 {
 	top: calc(50%);
 }
+.container .box .details .content .fa
+{
+	font-size: 80px;
+	color: #fff;
+}
 .container .box .details .content h3
 {
 	margin: 0;
@@ -98,7 +110,26 @@
 	padding: 10px 0;
 	color: #fff;
 }
-
+.container .box .details .content button
+{
+	display: inline-block;
+	padding: 5px 20px;
+	color: #fff;
+	border:2px solid #fff;
+	text-decoration: none;
+	transition:0.5s;
+	border-radius: 20px; 
+	transform: scale(0);
+}
+.container .box:hover .details .content button
+{
+	transform: scale(1);
+}
+.container .box .details .content button:hover
+{
+	background: #fff;
+	color: #262626;
+}
 @media (max-width: 1000px)
 {
 	.container
@@ -172,7 +203,8 @@
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
+    align-items: left
 }
 
 /* Add Animation */
@@ -188,8 +220,9 @@
 
 /* The Close Button */
 .close {
-    color: white;
-    float: right;
+	background: red;
+    color: red;
+    float: left;
     font-size: 28px;
     font-weight: bold;
 }
@@ -208,6 +241,10 @@
 }
 
 .modal-body {padding: 2px 16px;}
+.modal-body img {
+	width: 80%;
+	height: 100%;
+}
 
 .modal-footer {
     padding: 2px 16px;
