@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="stylejs.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -19,7 +18,8 @@
 	<script type="text/javascript" src="assets/js/main.js"></script>
 </head>
 <body>
-	<div class="wrapper">
+<div class="wrapper">
+	<div class="container">
 		<header id="header">
 			<div class="container">
 				<div id="logo" class="pull-left">
@@ -30,13 +30,13 @@
 					<ul class="nav-menu">
 						<li class="menu-active"><a href="#home">Home</a></li>
 						<li><a href="#life">Life @ alva's</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="https://www.aiet.org.in/contact-us/">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 
-		<section id="home">
+		<section id="home" class="row">
 			<div class="home-container">
 				<!--<iframe width="90%" height="80%" src="https://www.youtube.com/embed/Ovw_9jsBIzk?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 				<div class="home-section section-header">
@@ -174,41 +174,100 @@
 					 /new hexagons -->
 					<div class="container">
 						<div class="box">
-							
-							<div class="details">
+							<div class="thumb">
 								<img src="assets/img/img1.jpg">
+							</div>
+							<div class="details">
 								<div class="content">
+									<i class="fa fa-gift" aria-hidden="true"></i>
 									<h3>lorem1</h3>
+									<button class="modal-button" href="#myModal1">Read More</button>
 								</div>
 							</div>
 						</div>
 						<div class="box">
-							
-							<div class="details">
+							<div class="thumb">
 								<img src="assets/img/img2.jpg">
+							</div>
+							<div class="details">
 								<div class="content">
+									<i class="fa fa-globe" aria-hidden="true"></i>
 									<h3>lorem2</h3>
+									<button class="modal-button" href="#myModal2">Read More</button>
 								</div>
 							</div>
 						</div>
 						<div class="box">
-							
-							<div class="details">
+							<div class="thumb">
 								<img src="assets/img/img3.jpg">
+							</div>
+							<div class="details">
 								<div class="content">
+									<i class="fa fa-glass" aria-hidden="true"></i>
 									<h3>lorem1</h3>
+									<button class="modal-button" href="#myModal3">Read More</button>
 								</div>
 							</div>
 						</div>
 						<div class="box">
-							
-							<div class="details">
+							<div class="thumb">
 								<img src="assets/img/img4.jpg">
+							</div>
+							<div class="details">
 								<div class="content">
+									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 									<h3>lorem1</h3>
+									<button class="modal-button" href="#myModal4">Read More</button>
 								</div>
 							</div>
 						</div>
+					</div>
+			
+					<div id="myModal1" class="modal">
+					<!-- Modal content -->
+		  				<div class="modal-content">
+		    				<div class="modal-header">
+		      					<span class="close">×</span>
+		      					<h2>Modal Header</h2>
+		    				</div>
+		    				<div class="modal-body">
+		      					<p>Some text in the Modal Body</p>
+		      					<p>Some other text...</p>
+		    				</div>
+		    				<div class="modal-footer">
+		      					<h3>Modal Footer</h3>
+		    				</div>
+		  				</div>
+					</div>
+					<div id="myModal2" class="modal">
+		  				<div class="modal-content">
+		    				<div class="modal-header">
+		      					<span class="close">×</span>
+		      					<h2>Modal Header</h2>
+		    				</div>
+		    				<div class="modal-body">
+		      					<p>Some text in the Modal Body</p>
+		      					<p>Some other text...</p>
+		    				</div>
+		    				<div class="modal-footer">
+		      					<h3>Modal Footer</h3>
+		    				</div>
+		  				</div>
+					</div>
+					<div id="myModal3" class="modal">
+		  				<div class="modal-content">
+		    				<div class="modal-header">
+		      					<span class="close">×</span>
+		      					<h2>Modal Header</h2>
+		    				</div>
+		    				<div class="modal-body">
+		      					<p>Some text in the Modal Body</p>
+		      					<p>Some other text...</p>
+		    				</div>
+		    				<div class="modal-footer">
+		      					<h3>Modal Footer</h3>
+		    				</div>
+		  				</div>
 					</div>
 			</div>
 		</section><br><br><br>
@@ -218,9 +277,13 @@
 				<div><h2>content</h2></div>
 			</div>
 		</div>
+
 		<!-- section Life at alva's -->
 		<section id="life">
 			<div class="container">
+				<div class="section-header">
+					<h3 class="section-title">Life @ Alva's</h3>
+				</div>
 				<div class="row life-container">
 					<div class="col-lg-5 content order-lg-1 order-2">
 						<h2 class="title">Growth at Alva's</h2>
@@ -231,7 +294,6 @@
 								<div class="timeline-content">
 									<h2>* Admission</h2>
 									<p>entry to the college, content to be entred, iamges can also be placed to make it look nicer</p>
-									<a href="#" class="btn">button</a>
 								</div>
 							</div>
 
@@ -240,7 +302,6 @@
 								<div class="timeline-content">
 									<h2>1st year</h2>
 									<p>content to be entred</p>
-									<a href="#" class="btn">button</a>
 								</div>
 							</div>
 
@@ -249,7 +310,6 @@
 								<div class="timeline-content">
 									<h2>2nd year</h2>
 									<p>content to be entred</p>
-									<a href="#" class="btn">button</a>
 								</div>
 							</div>
 
@@ -258,7 +318,6 @@
 								<div class="timeline-content">
 									<h2>3rd year</h2>
 									<p>content to be entred</p>
-									<a href="#" class="btn">button</a>
 								</div>
 							</div>
 
@@ -517,23 +576,12 @@
 				</div>
 			</div>
 		</footer>
-	</div> <!-- wrapper end -->
-
-	<script type="text/javascript">
-		function initFunc() {
-			document.getElementById("popFaculty").style.display = "none";
-		}
-		function openNav() {
-			document.getElementById("popFaculty").style.display = "block";
-		}
-		function closeNav() {
-			document.getElementById("popFaculty").style.display = "none";
-		}
-	</script>
+	</div>
+</div> <!-- wrapper end -->
 <script type="text/javascript">
 	// Get the button that opens the modal
-var btn = document.querySelectorAll("button.modal-button");
-
+var btn = document.querySelectorAll(".modal-button");
+console.log(btn);
 // All page modals
 var modals = document.querySelectorAll('.modal');
 
@@ -541,13 +589,19 @@ var modals = document.querySelectorAll('.modal');
 var spans = document.getElementsByClassName("close");
 
 // When the user clicks the button, open the modal
-for (var i = 0; i < btn.length; i++) {
- btn[i].onclick = function(e) {
-    e.preventDefault();
-    modal = document.querySelector(e.target.getAttribute("href"));
-    modal.style.display = "block";
- }
-}
+// for (var i = 0; i < btn.length; i++) {
+//  btn[i].onclick = function(e) {
+//  	alert(btn[i].target.getAttribute("href"));
+//     e.preventDefault();
+//     modal = document.querySelector(e.target.getAttribute("href"));
+//     modal.style.display = "block";
+//  }
+// }
+btn.forEach((b)=> b.onclick = ()=>{
+	// alert(b.getAttribute('href'));
+	let modal = document.querySelector(b.getAttribute("href"));
+	modal.style.display = "block";
+})
 
 // When the user clicks on <span> (x), close the modal
 for (var i = 0; i < spans.length; i++) {
