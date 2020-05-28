@@ -720,8 +720,12 @@ Home video
 }
 
 /* company images */
+#company h3{
+  color: #ffffff;
+}
 #company {
   padding: 80px 0;
+  background-color: #fff;
 }
 #company {
   margin-top: 30px;
