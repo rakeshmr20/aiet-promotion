@@ -496,7 +496,7 @@ Home video
 }
 #timeline .timeline-item .timeline-content h2 {
   padding: 15px;
-  background: #8E44AD;
+  background: #00bcd4;
   color: #fff;
   margin: -20px -20px 0 -20px;
   font-weight: 300;
@@ -611,7 +611,18 @@ Home video
 .grid .grid-box:nth-child(2) {
   grid-column: span 2;
   grid-row: span 1;
+  background: #58b4ae;
 }
+.grid .grid-box:nth-child(3) {
+  background: #00bcd4;
+}
+.grid .grid-box:nth-child(4) {
+  background: #b2ebf2;
+}
+.grid .grid-box:nth-child(5) {
+  background: #6886c5;
+}
+
 .grid .grid-box:nth-child(6) {
   background: rgba(0,0,0,0);
 }
@@ -619,7 +630,7 @@ Home video
   background: rgba(0,0,0,0);
 }
 .grid .grid-box:nth-child(8) {
-  background: #F6E733;
+  background: #ff5722;
 }
 @media (max-width: 600px) {
   .grid {
@@ -811,7 +822,7 @@ Home video
   height: 12px;
   transform: translateY(-50%);
   border-radius: 50%;
-  background: #f45b69;
+  background: #00bcd4;
 }
 
 .htimeline ol li .htimeline-content {
