@@ -1,12 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
-html,
-body {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-  height: 100%;
-  width: 100%; 
-  font-weight: 400;
-}
+
 .wrapper {
   display: table;
   height: 100%;
@@ -14,7 +6,7 @@ body {
 }
 
 .container-fostrap {
-  display: table-cell;
+  display: table;
   padding: 1em;
   text-align: center;
   vertical-align: middle;
@@ -61,15 +53,6 @@ body {
 .card-title a {
   color: #000;
   text-decoration: none !important;
-}
-.card-read-more {
-  border-top: 1px solid #D4D4D4;
-}
-.card-read-more a {
-  text-decoration: none !important;
-  padding:10px;
-  font-weight:600;
-  text-transform: uppercase
 }
 
 /*added css */
@@ -173,11 +156,11 @@ body .no-padding{
           width: 350px; /* New width for small modal */
         }
     }
-    @media screen and (min-width: 992px) {
-        .modal-dialog {
-          width: 950px; /* New width for large modal */
-        }
-    }
+@media screen and (min-width: 992px) {
+  .modal-dialog {
+    width: 950px; /* New width for large modal */
+  }
+}
 
 
 @media (min-width: 450px) {

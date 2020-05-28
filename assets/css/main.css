@@ -393,7 +393,7 @@ Home video
 
 /* Sections Header
 --------------------------------*/
-.section-header .section-title {
+.row .section-header .section-title {
   font-family: 'Pangolin', cursive;
   font-size: 32px;
   color: #ffffff;
